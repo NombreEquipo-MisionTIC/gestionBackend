@@ -101,7 +101,7 @@ const typeDefs = gql`
             fechaFin: Date!
             fase: Enum_Fase!
             estado: Enum_EstadoP!
-            lider: Usuario!
+            lider: String!
         ): Proyecto
         
         eliminarProyecto(
