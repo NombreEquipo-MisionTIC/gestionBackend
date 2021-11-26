@@ -13,6 +13,7 @@ const tiposEnums = gql`
     enum Enum_EstadoI {
         ACEPTADA
         RECHAZADA
+        PENDIENTE
     }
     enum Enum_Fase{
         INICIADO

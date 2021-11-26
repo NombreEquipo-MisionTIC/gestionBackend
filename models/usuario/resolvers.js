@@ -31,11 +31,11 @@ const resolversUsuarios = {
                 correo: args.correo,
                 estado: args.estado,
                 rol: args.rol,
-            });
+            },{ new: true });
             return usuarioEditado;
         },
         eliminarUsuario: async (parent, args) => {
-            const usuarioEliminado = await UsuarioModel.findOneAndDelete({_id: args._id});
+            const usuarioEliminado = await UsuarioModel.findByIdAndDelete(args._id);
             return usuarioEliminado;
         },
     },

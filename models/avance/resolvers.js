@@ -23,6 +23,16 @@ const resolversAvance = {
       });
       return avanceCreado;
     },
+    editarAvance: async (parents, args) => {
+      const avanceEditado = AvanceModel.findByIdAndUpdate(args._id, {
+        descripcion: args.descripcion,
+      },{ new: true });
+      return avanceEditado;
+    },
+    eliminarAvance: async (parents, args) => {
+      const avanceEliminado = AvanceModel.findByIdAndDelete(args._id);
+      return avanceEliminado;
+    },
   },
 };
 

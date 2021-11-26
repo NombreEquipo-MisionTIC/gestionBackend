@@ -37,7 +37,7 @@ const resolversProyectos = {
                 fase: args.fase,
                 estado: args.estado,
                 lider: args.lider,
-            });
+            },{ new: true });
             return proyectoEditado;
         },
         eliminarProyecto: async (parent, args) => {
